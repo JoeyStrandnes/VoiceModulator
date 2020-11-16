@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-16T10:35:15.935Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="piXzamUYiTCK6-XAFEKI" version="13.9.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-16T10:36:45.496Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="CoVrrM1QJBoPBDYjwr2L" version="13.9.9" type="github">
   <diagram id="VRpXU8cP2z5s0b_zoVHM" name="Page-1">
     <mxGraphModel dx="920" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -19,7 +19,7 @@
         <mxCell id="N3TpXI0J3rCTfdHOcocq-4" value="USB: OTG" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="920" y="380" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="N3TpXI0J3rCTfdHOcocq-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="400" y="180" width="380" height="315" as="geometry" />
         </mxCell>
         <mxCell id="N3TpXI0J3rCTfdHOcocq-6" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Phone/ Computer&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
@@ -28,7 +28,7 @@
         <mxCell id="N3TpXI0J3rCTfdHOcocq-7" value="Audio: Headphone" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="120" y="210" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="N3TpXI0J3rCTfdHOcocq-10" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-10" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="90" y="180" width="180" height="310" as="geometry" />
         </mxCell>
         <mxCell id="N3TpXI0J3rCTfdHOcocq-11" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Headset&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
@@ -58,7 +58,7 @@
         <mxCell id="N3TpXI0J3rCTfdHOcocq-20" value="Audio: Microphone" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="420" y="360" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="N3TpXI0J3rCTfdHOcocq-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="890" y="185" width="180" height="310" as="geometry" />
         </mxCell>
         <mxCell id="N3TpXI0J3rCTfdHOcocq-23" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Circuit board&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
