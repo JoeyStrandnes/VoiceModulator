@@ -1,1 +1,70 @@
-<mxfile host="app.diagrams.net" modified="2020-11-16T10:22:22.429Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" version="13.9.9" etag="-Z3jARM-kjixWAq3NFu1" type="github"><diagram id="VRpXU8cP2z5s0b_zoVHM">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-16T10:35:15.935Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="piXzamUYiTCK6-XAFEKI" version="13.9.9" type="github">
+  <diagram id="VRpXU8cP2z5s0b_zoVHM" name="Page-1">
+    <mxGraphModel dx="920" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="N3TpXI0J3rCTfdHOcocq-1" target="N3TpXI0J3rCTfdHOcocq-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-1" value="ESP32-S2" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="585" y="350" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-2" value="Audio: Microphone" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-3" value="Audio: Headphone" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-4" value="USB: OTG" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="400" y="180" width="380" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-6" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Phone/ Computer&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="920" y="160" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-7" value="Audio: Headphone" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-10" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="90" y="180" width="180" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-11" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Headset&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="150" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-12" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="N3TpXI0J3rCTfdHOcocq-1" target="N3TpXI0J3rCTfdHOcocq-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="520" as="sourcePoint" />
+            <mxPoint x="540" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="N3TpXI0J3rCTfdHOcocq-16" target="N3TpXI0J3rCTfdHOcocq-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-16" value="Audio: Microphone" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-19" value="" style="shape=flexArrow;endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="N3TpXI0J3rCTfdHOcocq-3" target="N3TpXI0J3rCTfdHOcocq-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="230" as="sourcePoint" />
+            <mxPoint x="320" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="N3TpXI0J3rCTfdHOcocq-20" target="N3TpXI0J3rCTfdHOcocq-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-20" value="Audio: Microphone" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="890" y="185" width="180" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="N3TpXI0J3rCTfdHOcocq-23" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Circuit board&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="150" width="160" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
