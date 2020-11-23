@@ -4,6 +4,8 @@
 #include "freertos/task.h"
 #include "driver/gpio.h"
 #include "sdkconfig.h"
+#include "voice_modes.h"
+
 
 #include <driver/adc.h>
 #include <driver/dac.h>
