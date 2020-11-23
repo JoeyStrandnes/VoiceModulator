@@ -12509,6 +12509,13 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-6.2992" y1="2.2098" x2="-5.5372" y2="2.2098" width="0.508" layer="22" curve="-180"/>
 <text x="-3.2766" y="1.5748" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
 </package>
+<package name="PTS647SKXXSMTR2LFS">
+<smd name="1" x="-2.625" y="1.5" dx="1.55" dy="1" layer="1"/>
+<smd name="3" x="-2.625" y="-1.5" dx="1.55" dy="1" layer="1"/>
+<smd name="2" x="2.625" y="1.5" dx="1.55" dy="1" layer="1"/>
+<smd name="4" x="2.625" y="-1.5" dx="1.55" dy="1" layer="1"/>
+<text x="-4" y="3" size="1.778" layer="25">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="N-JFET">
@@ -12637,6 +12644,13 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="4.1656" y="5.3086" size="2.0828" layer="95" ratio="6" rot="SR0">&gt;Name</text>
 <text x="5.08" y="-15.24" size="2.0828" layer="96" ratio="6">&gt;VALUE</text>
 </symbol>
+<symbol name="SWITCH">
+<pin name="1" x="-10.16" y="0" length="middle"/>
+<pin name="2" x="10.16" y="0" length="middle" rot="R180"/>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<text x="-7.62" y="5.08" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="CPH3910" prefix="Q">
@@ -12756,6 +12770,23 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="SOURCELIBRARY" value="Amphenol_ICC_2020-05-19" constant="no"/>
 <attribute name="VENDOR" value="Amphenol" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PTS647SK70SMTR2LFS" prefix="S">
+<description>Tactile Switch SPST-NO Top Actuated Surface Mount</description>
+<gates>
+<gate name="G$1" symbol="SWITCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PTS647SKXXSMTR2LFS">
+<connects>
+<connect gate="G$1" pin="1" pad="1 2"/>
+<connect gate="G$1" pin="2" pad="3 4"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -12936,6 +12967,17 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="FRAME3" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A4L-LOC" device=""/>
+<part name="S1" library="VoiceModulator" deviceset="PTS647SK70SMTR2LFS" device="" override_package3d_urn="urn:adsk.eagle:package:24950186/2" override_package_urn="urn:adsk.eagle:footprint:24950187/1"/>
+<part name="S2" library="VoiceModulator" deviceset="PTS647SK70SMTR2LFS" device="" override_package3d_urn="urn:adsk.eagle:package:24950189/2" override_package_urn="urn:adsk.eagle:footprint:24950190/1"/>
+<part name="S3" library="VoiceModulator" deviceset="PTS647SK70SMTR2LFS" device="" override_package3d_urn="urn:adsk.eagle:package:24950193/2" override_package_urn="urn:adsk.eagle:footprint:24950194/1"/>
+<part name="S4" library="VoiceModulator" deviceset="PTS647SK70SMTR2LFS" device="" override_package3d_urn="urn:adsk.eagle:package:24950197/2" override_package_urn="urn:adsk.eagle:footprint:24950198/1"/>
+<part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R21" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
+<part name="R22" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
+<part name="R23" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
+<part name="R24" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
+<part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14084,15 +14126,15 @@ Replace ESP32-S2 symbol with functional pinout</text>
 <attribute name="NAME" x="137.16" y="109.22" size="1.6764" layer="95"/>
 <attribute name="VALUE" x="137.16" y="106.68" size="1.6764" layer="96"/>
 </instance>
-<instance part="GND13" gate="1" x="73.66" y="76.2" smashed="yes">
-<attribute name="VALUE" x="71.12" y="73.66" size="1.778" layer="96"/>
+<instance part="GND13" gate="1" x="73.66" y="73.66" smashed="yes">
+<attribute name="VALUE" x="71.12" y="71.12" size="1.778" layer="96"/>
 </instance>
 <instance part="C21" gate="G$1" x="91.44" y="91.44" smashed="yes">
 <attribute name="NAME" x="95.504" y="91.821" size="1.778" layer="95"/>
 <attribute name="VALUE" x="95.504" y="89.281" size="1.778" layer="96"/>
 </instance>
-<instance part="GND18" gate="1" x="91.44" y="76.2" smashed="yes">
-<attribute name="VALUE" x="88.9" y="73.66" size="1.778" layer="96"/>
+<instance part="GND18" gate="1" x="91.44" y="73.66" smashed="yes">
+<attribute name="VALUE" x="88.9" y="71.12" size="1.778" layer="96"/>
 </instance>
 <instance part="FRAME5" gate="G$1" x="0" y="0" smashed="yes">
 <attribute name="DRAWING_NAME" x="217.17" y="15.24" size="2.54" layer="94"/>
@@ -14147,13 +14189,13 @@ Replace ESP32-S2 symbol with functional pinout</text>
 </segment>
 <segment>
 <wire x1="71.12" y1="88.9" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="88.9" x2="73.66" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="88.9" x2="73.66" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
 <pinref part="J4" gate="A" pin="5"/>
 </segment>
 <segment>
 <pinref part="C21" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="86.36" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="86.36" x2="91.44" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 </segment>
 </net>
@@ -14187,6 +14229,133 @@ Replace ESP32-S2 symbol with functional pinout</text>
 <wire x1="71.12" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
 <label x="73.66" y="91.44" size="0.8128" layer="95" xref="yes"/>
 <pinref part="J4" gate="A" pin="4"/>
+</segment>
+</net>
+</nets>
+</sheet>
+<sheet>
+<description>Buttons</description>
+<plain>
+</plain>
+<instances>
+<instance part="FRAME3" gate="G$1" x="0" y="0" smashed="yes">
+<attribute name="DRAWING_NAME" x="217.17" y="15.24" size="2.54" layer="94"/>
+<attribute name="LAST_DATE_TIME" x="217.17" y="10.16" size="2.286" layer="94"/>
+<attribute name="SHEET" x="230.505" y="5.08" size="2.54" layer="94"/>
+</instance>
+<instance part="S1" gate="G$1" x="58.42" y="119.38" smashed="yes">
+<attribute name="NAME" x="50.8" y="124.46" size="1.778" layer="95"/>
+</instance>
+<instance part="S2" gate="G$1" x="58.42" y="106.68" smashed="yes">
+<attribute name="NAME" x="50.8" y="111.76" size="1.778" layer="95"/>
+</instance>
+<instance part="S3" gate="G$1" x="58.42" y="93.98" smashed="yes">
+<attribute name="NAME" x="50.8" y="99.06" size="1.778" layer="95"/>
+</instance>
+<instance part="S4" gate="G$1" x="58.42" y="81.28" smashed="yes">
+<attribute name="NAME" x="50.8" y="86.36" size="1.778" layer="95"/>
+</instance>
+<instance part="GND23" gate="1" x="43.18" y="55.88" smashed="yes">
+<attribute name="VALUE" x="40.64" y="53.34" size="1.778" layer="96"/>
+</instance>
+<instance part="R21" gate="G$1" x="81.28" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="82.55" y="131.0386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="82.55" y="128.778" size="1.778" layer="96"/>
+</instance>
+<instance part="R22" gate="G$1" x="88.9" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="90.17" y="131.0386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="90.17" y="128.778" size="1.778" layer="96"/>
+</instance>
+<instance part="R23" gate="G$1" x="99.06" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="100.33" y="131.0386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="100.33" y="128.778" size="1.778" layer="96"/>
+</instance>
+<instance part="R24" gate="G$1" x="106.68" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="107.95" y="131.0386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="107.95" y="128.778" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY7" gate="G$1" x="93.98" y="154.94" smashed="yes">
+<attribute name="VALUE" x="92.075" y="158.115" size="1.778" layer="96"/>
+</instance>
+</instances>
+<busses>
+</busses>
+<nets>
+<net name="GND" class="0">
+<segment>
+<pinref part="S4" gate="G$1" pin="1"/>
+<pinref part="GND23" gate="1" pin="GND"/>
+<wire x1="48.26" y1="81.28" x2="43.18" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="81.28" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="S3" gate="G$1" pin="1"/>
+<wire x1="48.26" y1="93.98" x2="43.18" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="93.98" x2="43.18" y2="81.28" width="0.1524" layer="91"/>
+<junction x="43.18" y="81.28"/>
+<pinref part="S2" gate="G$1" pin="1"/>
+<wire x1="48.26" y1="106.68" x2="43.18" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="106.68" x2="43.18" y2="93.98" width="0.1524" layer="91"/>
+<junction x="43.18" y="93.98"/>
+<pinref part="S1" gate="G$1" pin="1"/>
+<wire x1="48.26" y1="119.38" x2="43.18" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="119.38" x2="43.18" y2="106.68" width="0.1524" layer="91"/>
+<junction x="43.18" y="106.68"/>
+</segment>
+</net>
+<net name="SW_1" class="0">
+<segment>
+<pinref part="S1" gate="G$1" pin="2"/>
+<pinref part="R21" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="127" x2="81.28" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="119.38" x2="68.58" y2="119.38" width="0.1524" layer="91"/>
+<label x="81.28" y="119.38" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="SW_2" class="0">
+<segment>
+<pinref part="R22" gate="G$1" pin="2"/>
+<pinref part="S2" gate="G$1" pin="2"/>
+<wire x1="88.9" y1="127" x2="88.9" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="106.68" x2="68.58" y2="106.68" width="0.1524" layer="91"/>
+<label x="88.9" y="106.68" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="SW_3" class="0">
+<segment>
+<pinref part="R23" gate="G$1" pin="2"/>
+<pinref part="S3" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="127" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="93.98" x2="68.58" y2="93.98" width="0.1524" layer="91"/>
+<label x="99.06" y="93.98" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="SW_4" class="0">
+<segment>
+<pinref part="R24" gate="G$1" pin="2"/>
+<pinref part="S4" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="127" x2="106.68" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="81.28" x2="68.58" y2="81.28" width="0.1524" layer="91"/>
+<label x="106.68" y="81.28" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<pinref part="R21" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="137.16" x2="81.28" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="139.7" x2="88.9" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="R22" gate="G$1" pin="1"/>
+<wire x1="88.9" y1="139.7" x2="88.9" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="137.16" x2="99.06" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="139.7" x2="93.98" y2="139.7" width="0.1524" layer="91"/>
+<junction x="88.9" y="139.7"/>
+<pinref part="R24" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="139.7" x2="88.9" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="137.16" x2="106.68" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="139.7" x2="99.06" y2="139.7" width="0.1524" layer="91"/>
+<junction x="99.06" y="139.7"/>
+<pinref part="SUPPLY7" gate="G$1" pin="VCC"/>
+<wire x1="93.98" y1="152.4" x2="93.98" y2="139.7" width="0.1524" layer="91"/>
+<junction x="93.98" y="139.7"/>
 </segment>
 </net>
 </nets>
