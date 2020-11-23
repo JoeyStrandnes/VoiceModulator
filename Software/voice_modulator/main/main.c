@@ -1,41 +1,51 @@
-/* Blink Example
 
-   This example code is in the Public Domain (or CC0 licensed, at your option.)
-
-   Unless required by applicable law or agreed to in writing, this
-   software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-   CONDITIONS OF ANY KIND, either express or implied.
-*/
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
 #include "sdkconfig.h"
 
-/* Can use project configuration menu (idf.py menuconfig) to choose the GPIO to blink,
-   or you can edit the following line and set a number here.
-*/
-#define BLINK_GPIO CONFIG_BLINK_GPIO
+#include <driver/adc.h>
+#include <driver/dac.h>
 
-void app_main(void)
-{
-    /* Configure the IOMUX register for pad BLINK_GPIO (some pads are
-       muxed to GPIO on reset already, but some default to other
-       functions and need to be switched to GPIO. Consult the
-       Technical Reference for a list of pads and their default
-       functions.)
-    */
-    gpio_reset_pin(BLINK_GPIO);
-    /* Set the GPIO as a push/pull output */
-    gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
+
+
+#define ADC_PIN ADC1_CHANNEL_0
+
+void ADC_SETUP(){
+
+  adc1_config_width(ADC_WIDTH_BIT_13);
+  adc1_config_channel_atten(ADC_PIN, ADC_ATTEN_0db);
+
+}
+
+
+void app_main(void){
+
+    ADC_SETUP();
+
+    dac_output_enable(DAC_CHANNEL_1);
+    
+    uint16_t ADC_BUFFER[100];
+    //uint16_t ADC_Read;
+
+
     while(1) {
-        /* Blink off (output low) */
-	printf("Turning off the LED\n");
-        gpio_set_level(BLINK_GPIO, 0);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-        /* Blink on (output high) */
-	printf("Turning on the LED\n");
-        gpio_set_level(BLINK_GPIO, 1);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+
+      for (uint8_t i = 0; i < 100; i++){
+        ADC_BUFFER[i] = adc1_get_raw(ADC_PIN);
+      }
+
+      for(uint8_t i = 0; i < 100; i++){
+        printf("%d", ADC_BUFFER[i]);
+
+      }
+
+      /*
+      ADC_Read = adc1_get_raw(ADC_PIN);
+      printf("ADC Value:");
+      printf("%d\n", ADC_Read);
+      */
+      vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
