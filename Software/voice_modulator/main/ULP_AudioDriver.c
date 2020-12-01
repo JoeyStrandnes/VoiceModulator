@@ -9,6 +9,7 @@
 #include "ULP_AudioDriver.h"
 #include "sound.h"
 
+
 unsigned long samplingRate = 44100;
 const int opcodeCount = 17;
 const int dacTableStart1 = 2048 - 512;
@@ -33,12 +34,13 @@ void startULPSound(){
   int retAddress1 = 13;
 
   int loopCycles = 84;
+  printf("%s\n","Real RTC clock: ");
   //Serial.print("Real RTC clock: ");
   //Serial.println(rtc_fast_freq_hz);
   int dt = (rtc_fast_freq_hz / samplingRate) - loopCycles;
  /*
   if(dt < 0)
-    Serial.println("Sampling rate too high"); 
+    Serial.println("Sampling rate too high");
   Serial.print("dt: ");
   Serial.println(dt);
 */
@@ -87,7 +89,7 @@ const ulp_insn_t mono[] = {
 //  this is how to get the opcodes
 //  for(int i = 0; i < size; i++)
 //    Serial.println(RTC_SLOW_MEM[i], HEX);
-  
+
   //create DAC opcode tables
   for(int i = 0; i < 256; i++){
 
@@ -98,15 +100,17 @@ const ulp_insn_t mono[] = {
   //set all samples to 128 (silence)
   for(int i = 0; i < totalSampleWords; i++)
     RTC_SLOW_MEM[bufferStart + i] = 0x8080;
-    
+
   //start
   RTC_SLOW_MEM[indexAddress] = 0;
   ulp_run(0);
-  while(RTC_SLOW_MEM[indexAddress] == 0) 
+  while(RTC_SLOW_MEM[indexAddress] == 0)
     vTaskDelay(1 / portTICK_PERIOD_MS);
 }
 
 long currentSample = 0;
+
+
 unsigned char nextSample(){
   static long pos = 0;
 
@@ -134,15 +138,15 @@ void fillSamples(){
   }
 }
 /*
-void setup() 
+void setup()
 {
   Serial.begin(115200);
   Serial.print("Total samples: ");
-  Serial.println(totalSamples);  
+  Serial.println(totalSamples);
   startULPSound();
 }
 
-void loop() 
+void loop()
 {
   delay(10);
   //Serial.println(RTC_SLOW_MEM[indexAddress] & 0xffff);
